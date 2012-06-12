@@ -3,3 +3,17 @@ INSTALLATION
 create a symbolic link in your HOME
 
 ln -s <path to your cloned repo>/bash_profile .bash_profile
+
+AUTOCOMPLETION
+---------------------
+For autocompletion, you need the file git-completion.sh, in normal git installations
+it can be found in: 
+
+/usr/local/git/contrib/completion/git-completion.bash
+
+if it is there, leave it there, the bash_profile must work properly
+if not, you must download it from the oficial git repository:
+
+https://github.com/git/git/blob/master/contrib/completion/git-completion.bash
+
+and then intall it in the folder described above, or modify bash_profile
