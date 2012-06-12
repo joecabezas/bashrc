@@ -1,0 +1,5 @@
+INSTALLATION
+---------------------
+create a symbolic link in your HOME
+
+ln -s <path to your cloned repo>/bash_profile .bash_profile
