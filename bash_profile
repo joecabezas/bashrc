@@ -4,28 +4,27 @@
 # Prompt (OS X + homebrew)
 #source /usr/local/etc/bash_completion.d/git-completion.bash
 
-#PS1="\[\033[31;38m\]\w\[\033[1;31m\]\$(__git_ps1)\[\033[00m\] "
-#export GIT_PS1_SHOWDIRTYSTATE=1
-
 # Next 2 files can be downloaded from git repo:
 # https://github.com/git/git/tree/master/contrib/completion
 
 # Set git autocompletion
 if [ -f /usr/local/git/contrib/completion/git-completion.bash ]; then
-  . /usr/local/git/contrib/completion/git-completion.bash
+    . /usr/local/git/contrib/completion/git-completion.bash
 fi
 
 # and PS1 integration
 if [ -f /usr/local/git/contrib/completion/git-prompt.sh ]; then
-  . /usr/local/git/contrib/completion/git-prompt.sh
+    . /usr/local/git/contrib/completion/git-prompt.sh
 fi
 
 GIT_PS1_SHOWDIRTYSTATE=true
 GIT_PS1_SHOWSTASHSTATE=true
 GIT_PS1_SHOWUNTRACKEDFILES=true
 
+#default ps1
 #export PS1="\u@\h:\[\e[1;32m\]\w\[\033[1;31m\]\$(__git_ps1)\[\033[00m\] $ "
 
+#custom ps1
 export PS1="${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\[\033[1;31m\]\$(__git_ps1)\[\033[00m\] $ "
 
 alias d='git diff --word-diff $@'
@@ -68,3 +67,7 @@ __git_shortcut  d    diff
 
 #custom aliases
 alias ll='ls -alh'
+
+#custom dirs added to PATH
+PATH=${PATH}:"/Users/joe/bin"
+export PATH
