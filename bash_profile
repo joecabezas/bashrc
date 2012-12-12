@@ -69,5 +69,5 @@ __git_shortcut  d    diff
 alias ll='ls -alh'
 
 #custom dirs added to PATH
-PATH=${PATH}:"/Users/joe/bin"
+PATH=${PATH}:"~/bin"
 export PATH
