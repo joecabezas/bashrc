@@ -35,7 +35,17 @@ alias co='git checkout'
 alias a='git add $@'
 alias ai='git add -i'
 alias ac='git add .;c $@'
-alias lg='git lg'
+alias lg='git log --color --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit'
+
+#git colors
+git config --global color.ui auto
+git config --global color.branch auto
+git config --global color.diff auto
+git config --global color.interactive auto
+git config --global color.status auto
+
+#git merge conflictstyle
+git config --global merge.conflictstyle diff3
 
 __define_git_completion () {
 eval "
