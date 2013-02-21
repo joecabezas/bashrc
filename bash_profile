@@ -36,6 +36,7 @@ alias a='git add $@'
 alias ai='git add -i'
 alias ac='git add .;c $@'
 alias lg='git log --color --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit'
+alias lgb='lg --all --simplify-by-decoration'
 
 #git colors
 git config --global color.ui auto
