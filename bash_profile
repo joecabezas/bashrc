@@ -77,7 +77,7 @@ __git_shortcut  c   commit -v
 __git_shortcut  d    diff
 
 #custom aliases
-alias ll='ls -alh'
+alias ll='ls -alhG'
 
 #custom dirs added to PATH
 PATH=${PATH}:"~/bin"
