@@ -78,6 +78,7 @@ __git_shortcut  d    diff
 
 #custom aliases
 alias ll='ls -alhG'
+alias ls='ls -G'
 
 #custom dirs added to PATH
 PATH=${PATH}:"~/bin"
