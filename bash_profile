@@ -46,6 +46,9 @@ git config --global color.diff auto
 git config --global color.interactive auto
 git config --global color.status auto
 
+#USING SUBLIME TEXT FOR REBASE INTERACTIVE
+git config --global sequence.editor "sublime -n -w"
+
 #git merge conflictstyle
 git config --global merge.conflictstyle diff3
 
