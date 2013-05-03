@@ -36,8 +36,21 @@ alias a='git add $@'
 alias ai='git add -i'
 alias ac='git add .;c $@'
 alias lg='git log --color --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit'
+
+#git log branches
 alias lgb='lg --all --simplify-by-decoration'
-alias rcl='git reset --hard HEAD && git clean -f'
+
+#git reset
+alias rs='git reset --hard HEAD'
+
+#git clean
+alias cl='git clean -f'
+
+#git reset clean
+alias rscl='git reset --hard HEAD && git clean -f'
+
+#git stash index
+alias si='git stash --keep-index; git stash drop; git stash'
 
 #git colors
 git config --global color.ui auto
