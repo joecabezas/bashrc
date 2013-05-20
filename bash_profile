@@ -38,6 +38,7 @@ alias ac='git add .;c $@'
 alias lg='git log --color --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit'
 alias lgb='lg --all --simplify-by-decoration'
 alias po='git pull origin $@'
+alias fa='git fetch --all'
 
 #git colors
 git config --global color.ui auto
