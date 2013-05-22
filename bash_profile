@@ -21,11 +21,37 @@ GIT_PS1_SHOWDIRTYSTATE=true
 GIT_PS1_SHOWSTASHSTATE=true
 GIT_PS1_SHOWUNTRACKEDFILES=true
 
-#default ps1
-#export PS1="\u@\h:\[\e[1;32m\]\w\[\033[1;31m\]\$(__git_ps1)\[\033[00m\] $ "
+function colour {
+	local colour=${1}
+	local code=""
 
-#custom ps1
-export PS1="${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\[\033[1;31m\]\$(__git_ps1)\[\033[00m\] $ "
+	case $1 in
+		"none" )		code="0";;
+		"black" )		code="0;30";;
+		"blackbold" )	code="1;30";;
+		"red" )			code="0;31";;
+		"redbold" )		code="1;31";;
+		"green" )		code="0;32";;
+		"greenbold" )	code="1;32";;
+		"yellow" )		code="0;33";;
+		"yellowbold" )	code="1;33";;
+		"purple" )		code="0;34";;
+		"purplebold" )	code="1;34";;
+		"magenta" )		code="0;35";;
+		"magentabold" )	code="1;35";;
+		"cyan" )		code="0;36";;
+		"cyanbold" )	code="1;36";;
+		"white" )		code="0;37";;
+		"whitebold" )	code="1;37";;
+		*)
+		echo "colour ${1} not found!"
+		exit 1
+		;;
+	esac
+	echo "\[\033[${code}m\]"
+}
+
+export PS1="┌$(colour "purple")[\d \t] $(colour "greenbold")\u@\h$(colour "white"):$(colour "purplebold")\w$(colour "redbold")\$(__git_ps1)\n$(colour "white")└─›"
 
 alias d='git diff --word-diff $@'
 alias s='git status -sb'
@@ -95,6 +121,9 @@ __git_shortcut  d    diff
 
 #custom aliases
 alias ll='ls -alh'
+
+#refresh shell
+alias reload='source ~/.bash_profile'
 
 #custom dirs added to PATH
 PATH=${PATH}:"~/bin"
