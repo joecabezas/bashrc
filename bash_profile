@@ -66,6 +66,8 @@ alias lga='lg --all'
 
 #git log branches
 alias lgb='lg --all --simplify-by-decoration'
+alias po='git pull origin $@'
+alias fa='git fetch --all'
 
 #git reset
 alias rs='git reset --hard HEAD'
@@ -121,7 +123,9 @@ __git_shortcut  c   commit -v
 __git_shortcut  d    diff
 
 #custom aliases
-alias ll='ls -alh'
+alias ll='ls -alhG'
+alias ls='ls -G'
+alias test='node_modules/ngServer/bin/ngServer.js test'
 
 #refresh shell
 alias reload='source ~/.bash_profile'
