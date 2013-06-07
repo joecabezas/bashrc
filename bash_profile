@@ -61,25 +61,18 @@ alias co='git checkout'
 alias a='git add $@'
 alias ai='git add -i'
 alias ac='git add .;c $@'
+alias si='git stash --keep-index; git stash drop; git stash'
+
 alias lg='git log --color --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit'
 alias lga='lg --all'
-
-#git log branches
 alias lgb='lg --all --simplify-by-decoration'
+
 alias po='git pull origin $@'
 alias fa='git fetch --all'
 
-#git reset
 alias rs='git reset --hard HEAD'
-
-#git clean
 alias cl='git clean -f'
-
-#git reset clean
 alias rscl='git reset --hard HEAD && git clean -f'
-
-#git stash index
-alias si='git stash --keep-index; git stash drop; git stash'
 
 #git colors
 git config --global color.ui auto
