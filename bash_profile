@@ -67,7 +67,7 @@ alias lg='git log --color --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%
 alias lga='lg --all'
 alias lgb='lg --all --simplify-by-decoration'
 
-alias po='git pull origin $@'
+alias pr='git pull --rebase $@'
 alias fa='git fetch --all'
 
 alias rs='git reset --hard HEAD'
