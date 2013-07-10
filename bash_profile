@@ -68,6 +68,7 @@ alias lga='lg --all'
 alias lgb='lg --all --simplify-by-decoration'
 
 alias pr='git pull --rebase'
+alias prom='git pull --rebase origin master'
 alias fa='git fetch --all'
 
 alias rs='git reset --hard HEAD'
