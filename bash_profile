@@ -17,6 +17,16 @@ if [ -f /usr/local/git/contrib/completion/git-prompt.sh ]; then
 	. /usr/local/git/contrib/completion/git-prompt.sh
 fi
 
+#Ubuntu 12.04 or less
+if [ -f /etc/bash_completion.d/git ]; then
+	. /etc/bash_completion.d/git
+fi
+
+#Ubuntu 13.04 and higher
+if [ -f /etc/bash_completion.d/git-prompt ]; then
+	. /etc/bash_completion.d/git-prompt
+fi
+
 GIT_PS1_SHOWDIRTYSTATE=true
 GIT_PS1_SHOWSTASHSTATE=true
 GIT_PS1_SHOWUNTRACKEDFILES=true
