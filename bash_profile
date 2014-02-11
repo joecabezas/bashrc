@@ -133,6 +133,12 @@ alias ls='ls -G'
 #refresh shell
 alias reload='source ~/.bash_profile'
 
+#GET EXTERNAL IP ADDRESS
+function getip()
+{
+	curl http://ipecho.net/plain; echo;
+}
+
 #custom dirs added to PATH
 PATH=${PATH}:"~/bin"
 export PATH
