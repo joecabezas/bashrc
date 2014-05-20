@@ -51,6 +51,13 @@ function colour {
 	echo "\[\033[${code}m\]"
 }
 
+function fingerprints() {
+	local file="$1"
+	while read l; do
+		[[ -n $l && ${l###} = $l ]] && ssh-keygen -l -f /dev/stdin <<<$l
+	done < $file
+}
+
 export PS1="┌$(colour "purple")[\d \t] $(colour "greenbold")\u@\h$(colour "white"):$(colour "purplebold")\w$(colour "redbold")\$(__git_ps1)\n$(colour "white")└─›"
 
 alias d='git diff --word-diff $@'
