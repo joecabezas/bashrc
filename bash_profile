@@ -134,8 +134,8 @@ __git_shortcut  c   commit -v
 __git_shortcut  d    diff
 
 #custom aliases
+alias ls='ls --color=auto -G'
 alias ll='ls -alhG'
-alias ls='ls -G'
 
 #refresh shell
 alias reload='source ~/.bash_profile'
