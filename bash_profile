@@ -70,6 +70,7 @@ function fingerprints() {
 
 export PS1="┌$(colour "purple")[\d \t] $(colour "greenbold")\u@\h$(colour "white"):$(colour "purplebold")\w$(colour "redbold")\$(__git_ps1)\n$(colour "white")└─›"
 
+#custom git aliases
 alias d='git diff --word-diff $@'
 alias s='git status -sb'
 alias b='git branch -avv'
@@ -138,7 +139,7 @@ alias ls='ls --color=auto -G'
 alias ll='ls -alhG'
 
 #refresh shell
-alias reload='source ~/.bash_profile'
+alias reload='source ~/.bashrc'
 
 #GET EXTERNAL IP ADDRESS
 function getip()
